@@ -1,4 +1,6 @@
-class Negociacoes {
+import { Negociacao } from './Negocioacao'
+
+export class Negociacoes {
     private _negociacoes: Negociacao[]  = [];
 
     adiciona(negociacao: Negociacao): void {
