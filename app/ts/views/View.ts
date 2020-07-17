@@ -1,3 +1,5 @@
+import { LogarTempoDeExecucao } from '../helpers/decorators/LogarTempoDeExecucao';
+
 export abstract class View<T> {
 
     protected _elemento: JQuery;
@@ -8,7 +10,7 @@ export abstract class View<T> {
         this._elemento = $(seletor);
     }
 
-
+    @LogarTempoDeExecucao(true)
     update(model: T): void {
 
         this._elemento.html(this.template(model));
